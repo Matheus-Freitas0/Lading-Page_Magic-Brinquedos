@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff6b9d, #ffa726);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #e91e63, #f57c00);
+}
+
+/* Animações personalizadas */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+/* Classes utilitárias */
+.magic-gradient {
+  background: linear-gradient(
+    135deg,
+    #ff6b9d 0%,
+    #ffa726 30%,
+    #4caf50 60%,
+    #2196f3 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.magic-shadow {
+  box-shadow: 0 8px 32px rgba(255, 107, 157, 0.3);
+}
+
+.magic-hover {
+  transition: all 0.3s ease;
+}
+
+.magic-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(255, 107, 157, 0.4);
+}
+
+/* Melhorias para mobile */
+@media (max-width: 768px) {
+  .magic-hover:hover {
+    transform: none;
+  }
+}
+
+/* Seleção de texto personalizada */
+::selection {
+  background: rgba(255, 107, 157, 0.3);
+  color: #333;
+}
+
+::-moz-selection {
+  background: rgba(255, 107, 157, 0.3);
+  color: #333;
+}
+
+/* Foco personalizado para acessibilidade */
+*:focus {
+  outline: 2px solid #ff6b9d;
+  outline-offset: 2px;
+}
+
+/* Melhorias para animações suaves */
+.motion-safe {
+  will-change: transform;
+}
+
+/* Estilos para elementos mágicos */
+.magic-element {
+  position: relative;
+  overflow: hidden;
+}
+
+.magic-element::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
