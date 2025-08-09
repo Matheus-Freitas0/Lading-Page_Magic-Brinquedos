@@ -117,7 +117,6 @@ const Categories = () => {
                     overflow: "hidden",
                     boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
                     transition: "all 0.3s ease",
-                    cursor: "pointer",
                     "&:hover": {
                       transform: "translateY(-8px) scale(1.02)",
                       boxShadow: "0 16px 32px rgba(0,0,0,0.2)",

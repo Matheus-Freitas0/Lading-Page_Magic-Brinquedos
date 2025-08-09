@@ -26,6 +26,10 @@ const Footer = () => {
     window.open("https://www.instagram.com/magicbrinquedosoficial", "_blank");
   };
 
+  const handleFacebook = () => {
+    window.open("https://www.facebook.com/p/Magic-Brinquedos-61555727103145", "_blank");
+  };
+
   return (
     <Box
       sx={{
@@ -195,6 +199,15 @@ const Footer = () => {
                 >
                   (11) 91596-2801
                 </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    mb: 2,
+                    opacity: 0.9,
+                  }}
+                >
+                  magicbrinquedosoficial@hotmail.com
+                </Typography>
               </Box>
 
               <Box sx={{ display: "flex", gap: 2 }}>
@@ -227,6 +240,7 @@ const Footer = () => {
                   <InstagramIcon />
                 </IconButton>
                 <IconButton
+                  onClick={handleFacebook}
                   sx={{
                     backgroundColor: "#1877F2",
                     color: "white",
@@ -238,19 +252,6 @@ const Footer = () => {
                   }}
                 >
                   <FacebookIcon />
-                </IconButton>
-                <IconButton
-                  sx={{
-                    backgroundColor: "#EA4335",
-                    color: "white",
-                    "&:hover": {
-                      backgroundColor: "#D33E2E",
-                      transform: "scale(1.1)",
-                    },
-                    transition: "all 0.3s ease",
-                  }}
-                >
-                  <EmailIcon />
                 </IconButton>
               </Box>
             </motion.div>
