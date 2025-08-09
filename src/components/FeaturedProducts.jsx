@@ -20,7 +20,7 @@ const FeaturedProducts = () => {
     {
       id: 1,
       name: "Hot Wheels unidade",
-      image: "./src/assets/hotWheels.webp",
+      image: "/assets/hotWheels.webp",
       category: "Carrinhos",
       price: "R$ 19,99",
       rating: 5,
@@ -31,7 +31,7 @@ const FeaturedProducts = () => {
     {
       id: 2,
       name: "Nerf - Lançador Alpha Strike",
-      image: "./src/assets/nerfAlpha.webp",
+      image: "/assets/nerfAlpha.webp",
       category: "Nerf",
       price: "R$ 109,90",
       rating: 5,
@@ -42,7 +42,7 @@ const FeaturedProducts = () => {
     {
       id: 3,
       name: "Boneco Minecraft - Cadres 35cm ",
-      image: "./src/assets/cadresMinecraft.webp",
+      image: "/assets/cadresMinecraft.webp",
       category: "Bonecos",
       price: "R$ 89,90",
       rating: 5,
@@ -53,8 +53,7 @@ const FeaturedProducts = () => {
     {
       id: 4,
       name: "Card para Colorir Cozy e Comfy",
-      image:
-        "./src/assets/cozyComfy.webp",
+      image: "/assets/cozyComfy.webp",
       category: "Criatividade",
       price: "R$ 4,99",
       rating: 5,
@@ -65,7 +64,7 @@ const FeaturedProducts = () => {
     {
       id: 5,
       name: "Boneco Youtuber Enaldinho Com Pulseira Do Poder",
-      image: "./src/assets/bonecoEnaldinho.webp",
+      image: "/assets/bonecoEnaldinho.webp",
       category: "Bonecos",
       price: "R$ 179,90",
       rating: 5,
@@ -76,8 +75,7 @@ const FeaturedProducts = () => {
     {
       id: 6,
       name: "Conjunto De Acessórios De Beleza - Hello Kitty",
-      image:
-        "./src/assets/acessoriosHelloKitty.webp",
+      image: "/assets/acessoriosHelloKitty.webp",
       category: "Acessórios",
       price: "R$ 129,90",
       rating: 5,
@@ -88,8 +86,7 @@ const FeaturedProducts = () => {
     {
       id: 7,
       name: "Boneco Disney Stitch - Minimals",
-      image:
-        "./src/assets/stitchMinimals.webp",
+      image: "/assets/stitchMinimals.webp",
       category: "Bonecos",
       price: "R$ 79,90",
       rating: 5,
@@ -100,8 +97,7 @@ const FeaturedProducts = () => {
     {
       id: 8,
       name: "Bicicleta Equilíbrio Totoka Infantil Totocross",
-      image:
-        "./src/assets/totocross.webp",
+      image: "/assets/totocross.webp",
       category: "Bicicletas",
       price: "R$ 139,90",
       rating: 5,

@@ -15,7 +15,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import logo from "../assets/LOGO_MAGIC_BRINQUEDOS.png";
+const logo = "/assets/LOGO_MAGIC_BRINQUEDOS.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);

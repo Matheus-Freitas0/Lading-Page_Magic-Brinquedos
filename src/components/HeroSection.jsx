@@ -17,7 +17,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import MagicParticles from "./MagicParticles";
-import logo from "../assets/LOGO_MAGIC_BRINQUEDOS.png";
+const logo = "/assets/LOGO_MAGIC_BRINQUEDOS.png";
 
 const HeroSection = () => {
   const handleWhatsApp = () => {

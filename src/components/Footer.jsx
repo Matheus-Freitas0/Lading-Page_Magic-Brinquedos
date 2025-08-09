@@ -12,7 +12,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
-import logo from "../assets/LOGO_MAGIC_BRINQUEDOS.png";
+const logo = "/assets/LOGO_MAGIC_BRINQUEDOS.png";
 
 const Footer = () => {
   const handleWhatsApp = () => {

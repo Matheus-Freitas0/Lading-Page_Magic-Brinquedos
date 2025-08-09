@@ -18,21 +18,21 @@ const InstagramFeed = () => {
   const instagramPosts = [
     {
       id: 1,
-      image: "./src/assets/instagramEquipe.webp",
+      image: "/assets/instagramEquipe.webp",
       likes: 124,
       comments: 8,
       caption: "✨️Chegamos na trend...",
     },
     {
       id: 2,
-      image: "./src/assets/instagramGirababy.jpg",
+      image: "/assets/instagramGirababy.jpg",
       likes: 289,
       comments: 35,
       caption: "🧸 Desenvolvimento e Diversão com o Girababy Didático! 🧸",
     },
     {
       id: 3,
-      image: "./src/assets/instagramDinoPintura.jpg",
+      image: "/assets/instagramDinoPintura.jpg",
       likes: 156,
       comments: 12,
       caption:
@@ -40,7 +40,7 @@ const InstagramFeed = () => {
     },
     {
       id: 4,
-      image: "./src/assets/instagramJogosPedagoga.jpg",
+      image: "/assets/instagramJogosPedagoga.jpg",
       likes: 203,
       comments: 15,
       caption:
@@ -48,7 +48,7 @@ const InstagramFeed = () => {
     },
     {
       id: 5,
-      image: "./src/assets/instagramDiaMaes.webp",
+      image: "/assets/InstagramDIaMaes.webp",
       likes: 167,
       comments: 9,
       caption:
@@ -56,7 +56,7 @@ const InstagramFeed = () => {
     },
     {
       id: 6,
-      image: "./src/assets/instagramDiaLivro.jpg",
+      image: "/assets/instagramDiaLivro.jpg",
       likes: 98,
       comments: 6,
       caption: "📚✨ Ler é brincar com a imaginação!",
