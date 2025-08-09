@@ -22,7 +22,7 @@ import logo from "../assets/LOGO_MAGIC_BRINQUEDOS.png";
 const HeroSection = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
-      "Olá! Gostaria de conhecer os brinquedos da Magic Brinquedos! 🎈✨"
+      "Olá! Gostaria de conhecer os brinquedos da Magic Brinquedos!"
     );
     window.open(`https://wa.me/5511915962801?text=${message}`, "_blank");
   };
@@ -72,7 +72,7 @@ const HeroSection = () => {
           position: "absolute",
           top: "10%",
           left: "5%",
-          color: "#FFD700",
+          color: "#FFC107",
           zIndex: 2,
         }}
       >
@@ -187,11 +187,7 @@ const HeroSection = () => {
                     mb: 3,
                     lineHeight: 1.2,
                     textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
-                    background:
-                      "linear-gradient(45deg, #FFFFFF 0%, #FFD700 50%, #FF6B9D 100%)",
-                    backgroundClip: "text",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    color: "warning.main", // Amarelo do tema
                   }}
                 >
                   Aqui a brincadeira é mágica! ✨
@@ -240,7 +236,7 @@ const HeroSection = () => {
                       variant="h3"
                       sx={{
                         fontWeight: 700,
-                        color: "#FFD700",
+                        color: "warning.main", // Amarelo do tema
                         mb: 0.5,
                       }}
                     >
@@ -255,7 +251,7 @@ const HeroSection = () => {
                       variant="h3"
                       sx={{
                         fontWeight: 700,
-                        color: "#FF6B9D",
+                        color: "primary.main", // Rosa do tema
                         mb: 0.5,
                       }}
                     >
@@ -270,7 +266,7 @@ const HeroSection = () => {
                       variant="h3"
                       sx={{
                         fontWeight: 700,
-                        color: "#4CAF50",
+                        color: "success.main", // Verde do tema
                         mb: 0.5,
                       }}
                     >
@@ -308,7 +304,7 @@ const HeroSection = () => {
                       onClick={handleWhatsApp}
                       sx={{
                         background:
-                          "linear-gradient(45deg, #25D366 30%, #128C7E 90%)",
+                          "linear-gradient(45deg, #25D366 30%, #128C7E 90%)", // theme.palette.magic.whatsapp
                         color: "white",
                         fontSize: "1.1rem",
                         padding: "16px 40px",
@@ -317,7 +313,7 @@ const HeroSection = () => {
                         fontWeight: 600,
                         "&:hover": {
                           background:
-                            "linear-gradient(45deg, #128C7E 30%, #25D366 90%)",
+                            "linear-gradient(45deg, #128C7E 30%, #25D366 90%)", // theme.palette.magic.whatsappDark
                           transform: "translateY(-3px)",
                           boxShadow: "0 12px 32px rgba(37, 211, 102, 0.6)",
                         },
@@ -385,7 +381,9 @@ const HeroSection = () => {
                       border: "1px solid rgba(255,255,255,0.2)",
                     }}
                   >
-                    <LocationOnIcon sx={{ fontSize: 20, color: "#FFD700" }} />
+                    <LocationOnIcon
+                      sx={{ fontSize: 20, color: "warning.main" }}
+                    />
                     <Typography variant="body2" sx={{ fontWeight: 600 }}>
                       São Paulo, SP
                     </Typography>
@@ -403,7 +401,7 @@ const HeroSection = () => {
                       border: "1px solid rgba(255,255,255,0.2)",
                     }}
                   >
-                    <PhoneIcon sx={{ fontSize: 20, color: "#FF6B9D" }} />
+                    <PhoneIcon sx={{ fontSize: 20, color: "primary.main" }} />
                     <Typography variant="body2" sx={{ fontWeight: 600 }}>
                       (11) 91596-2801
                     </Typography>

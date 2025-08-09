@@ -6,7 +6,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 const FloatingWhatsApp = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
-      "Olá! Gostaria de conhecer os brinquedos da Magic Brinquedos! 🎈✨"
+      "Olá! Gostaria de conhecer os brinquedos da Magic Brinquedos!"
     );
     window.open(`https://wa.me/5511915962801?text=${message}`, "_blank");
   };

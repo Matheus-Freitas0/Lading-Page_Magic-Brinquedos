@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid, Container } from "@mui/material";
+import { Box, Typography, Grid, Container, useTheme } from "@mui/material";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import PeopleIcon from "@mui/icons-material/People";
@@ -11,6 +11,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 const Stats = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const theme = useTheme();
 
   const stats = [
     {
@@ -18,35 +19,35 @@ const Stats = () => {
       number: 10000,
       suffix: "+",
       label: "Clientes Satisfeitos",
-      color: "#FF6B9D",
+      color: theme.palette.primary.main, // Rosa
     },
     {
       icon: FavoriteIcon,
       number: 4500,
       suffix: "+",
       label: "Produtos Mágicos",
-      color: "#FFA726",
+      color: theme.palette.secondary.main, // Laranja
     },
     {
       icon: StarIcon,
       number: 4.9,
       suffix: "",
       label: "Avaliação Média",
-      color: "#FFC107",
+      color: theme.palette.warning.main, // Amarelo
     },
     {
       icon: BusinessIcon,
       number: 3,
       suffix: " anos",
       label: "Tempo de Mercado",
-      color: "#4CAF50",
+      color: theme.palette.success.main, // Verde
     },
     {
       icon: StorefrontIcon,
-      number: 50,
+      number: 100,
       suffix: "+",
       label: "Marcas no Mercado",
-      color: "#9C27B0",
+      color: theme.palette.magic.purple, // Roxo
     },
   ];
 
@@ -55,7 +56,7 @@ const Stats = () => {
       ref={ref}
       sx={{
         py: 6,
-        background: "linear-gradient(135deg, #FAFAFA 0%, #F0F0F0 100%)",
+        background: "linear-gradient(135deg, #FAFAFA 0%, #F0F0F0 100%)", // Gradiente de fundo neutro
         position: "relative",
         overflow: "hidden",
       }}
@@ -96,7 +97,7 @@ const Stats = () => {
               borderRadius: "4px",
             },
             "&::-webkit-scrollbar-thumb": {
-              backgroundColor: "#FF6B9D",
+              backgroundColor: theme.palette.primary.main,
               borderRadius: "4px",
             },
           }}
@@ -180,7 +181,13 @@ const Stats = () => {
                           transition={{ duration: 1, delay: index * 0.1 + 0.5 }}
                         >
                           {stat.number}
-                          {stat.suffix}
+                          {stat.suffix === " anos" ? (
+                            <span style={{ fontSize: "2.8rem" }}>
+                              {stat.suffix}
+                            </span>
+                          ) : (
+                            stat.suffix
+                          )}
                         </motion.span>
                       ) : (
                         "0"

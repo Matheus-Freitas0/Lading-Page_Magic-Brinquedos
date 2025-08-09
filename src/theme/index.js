@@ -51,6 +51,9 @@ const theme = createTheme({
       blue: "#2196F3", // Azul da letra C
       darkBlue: "#1976D2", // Azul escuro do chapéu
       purple: "#9C27B0", // Magenta escuro
+      brown: "#795548", // Marrom para figuras de ação
+      whatsapp: "#25D366", // Verde do WhatsApp
+      whatsappDark: "#128C7E", // Verde escuro do WhatsApp
       white: "#FFFFFF",
       black: "#000000",
     },

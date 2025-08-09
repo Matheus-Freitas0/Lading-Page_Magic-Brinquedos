@@ -17,7 +17,7 @@ import logo from "../assets/LOGO_MAGIC_BRINQUEDOS.png";
 const Footer = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
-      "Olá! Gostaria de saber mais sobre a Magic Brinquedos! 🎈✨"
+      "Olá! Gostaria de saber mais sobre a Magic Brinquedos!"
     );
     window.open(`https://wa.me/5511915962801?text=${message}`, "_blank");
   };
@@ -278,7 +278,7 @@ const Footer = () => {
                 opacity: 0.8,
               }}
             >
-              © 2024 Magic Brinquedos – Todos os direitos reservados.
+              © 2022 Magic Brinquedos – Todos os direitos reservados.
             </Typography>
             <Box
               sx={{ mt: 1, display: "flex", justifyContent: "center", gap: 3 }}

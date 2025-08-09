@@ -109,13 +109,13 @@ const FeaturedProducts = () => {
 
   const handleWhatsApp = (productName) => {
     const message = encodeURIComponent(
-      `Olá! Gostaria de saber mais sobre o brinquedo: ${productName} 🎈✨`
+      `Olá! Gostaria de saber mais sobre o brinquedo: ${productName}`
     );
     window.open(`https://wa.me/5511915962801?text=${message}`, "_blank");
   };
 
   return (
-    <Box sx={{ py: 8, backgroundColor: "#FAFAFA" }}>
+    <Box sx={{ py: 8, backgroundColor: "background.paper" }}>
       <Container maxWidth="lg">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -214,7 +214,7 @@ const FeaturedProducts = () => {
                           label="NOVO"
                           size="small"
                           sx={{
-                            backgroundColor: "#4CAF50",
+                            backgroundColor: "success.main",
                             color: "white",
                             fontWeight: 600,
                             fontSize: "0.7rem",
@@ -233,7 +233,7 @@ const FeaturedProducts = () => {
                           label="POPULAR"
                           size="small"
                           sx={{
-                            backgroundColor: "#FF6B9D",
+                            backgroundColor: "primary.main",
                             color: "white",
                             fontWeight: 600,
                             fontSize: "0.7rem",
@@ -330,7 +330,7 @@ const FeaturedProducts = () => {
                         onClick={() => handleWhatsApp(product.name)}
                         fullWidth
                         sx={{
-                          backgroundColor: "#25D366",
+                          backgroundColor: "#25D366", // theme.palette.magic.whatsapp
                           color: "white",
                           fontWeight: 600,
                           borderRadius: 2,

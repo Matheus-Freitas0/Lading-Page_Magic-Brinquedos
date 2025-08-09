@@ -18,7 +18,7 @@ import DirectionsIcon from "@mui/icons-material/Directions";
 const Location = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
-      "Olá! Gostaria de saber mais sobre a Magic Brinquedos! 🎈✨"
+      "Olá! Gostaria de saber mais sobre a Magic Brinquedos!"
     );
     window.open(`https://wa.me/5511915962801?text=${message}`, "_blank");
   };
@@ -222,9 +222,7 @@ const Location = () => {
                     src="https://www.google.com/maps?q=Magic+Brinquedos,+R.+Abílio+Pedro+Ramos+672,+Vila+Nilo,+São+Paulo,+SP,+02279-000&output=embed&z=16"
                     width="600"
                     height="450"
-                    allowfullscreen=""
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
                     title="Localização Magic Brinquedos"
                   ></iframe>
                 </Box>

@@ -6,6 +6,7 @@ import {
   Card,
   CardContent,
   Container,
+  useTheme,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import SchoolIcon from "@mui/icons-material/School";
@@ -18,61 +19,63 @@ import SmartToyIcon from "@mui/icons-material/SmartToy";
 import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
 
 const Categories = () => {
+  const theme = useTheme();
+
   const categories = [
     {
       id: 1,
       name: "Educativos",
       icon: SchoolIcon,
-      color: "#4CAF50",
+      color: theme.palette.success.main, // Verde
       description: "Aprenda brincando!",
     },
     {
       id: 2,
       name: "Eletrônicos",
       icon: SmartToyIcon,
-      color: "#9C27B0",
+      color: theme.palette.magic.purple, // Roxo
       description: "Tecnologia divertida",
     },
     {
       id: 3,
       name: "Bonecas",
       icon: FavoriteIcon,
-      color: "#FF6B9D",
+      color: theme.palette.primary.main, // Rosa
       description: "Sonhos e fantasias",
     },
     {
       id: 4,
       name: "Carrinhos",
       icon: DirectionsCarIcon,
-      color: "#FFA726",
+      color: theme.palette.secondary.main, // Laranja
       description: "Velocidade e aventura",
     },
     {
       id: 5,
       name: "Jogos",
       icon: SportsEsportsIcon,
-      color: "#2196F3",
+      color: theme.palette.info.main, // Azul
       description: "Diversão em família",
     },
     {
       id: 6,
       name: "Pelúcias",
       icon: FavoriteIcon,
-      color: "#FFC107",
+      color: theme.palette.warning.main, // Amarelo
       description: "Fofura e carinho",
     },
     {
       id: 7,
       name: "Criatividade",
       icon: BrushIcon,
-      color: "#009688",
+      color: theme.palette.magic.teal, // Teal
       description: "Arte e imaginação",
     },
     {
       id: 8,
       name: "Figuras de Ação",
       icon: DirectionsRunIcon,
-      color: "#795548",
+      color: theme.palette.magic.brown, // Marrom do tema
       description: "Aventura e ação",
     },
   ];
