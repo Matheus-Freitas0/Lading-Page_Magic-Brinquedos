@@ -21,8 +21,7 @@ const InstagramFeed = () => {
       image: "./src/assets/instagramEquipe.webp",
       likes: 124,
       comments: 8,
-      caption:
-        "✨️Chegamos na trend...",
+      caption: "✨️Chegamos na trend...",
     },
     {
       id: 2,
@@ -137,6 +136,7 @@ const InstagramFeed = () => {
                 style={{ width: "100%", maxWidth: "400px" }}
               >
                 <Card
+                  onClick={handleInstagramClick}
                   sx={{
                     height: "100%",
                     display: "flex",
