@@ -18,45 +18,49 @@ const InstagramFeed = () => {
   const instagramPosts = [
     {
       id: 1,
-      image: "https://via.placeholder.com/300x300/FF6B9D/FFFFFF?text=Post+1",
+      image: "./src/assets/instagramEquipe.webp",
       likes: 124,
       comments: 8,
-      caption: "Boneca mágica nova chegou! ✨",
+      caption:
+        "✨️Chegamos na trend...",
     },
     {
       id: 2,
-      image: "https://via.placeholder.com/300x300/FFA726/FFFFFF?text=Post+2",
-      likes: 89,
-      comments: 5,
-      caption: "Carrinhos turbo em promoção! 🏎️",
+      image: "./src/assets/instagramGirababy.jpg",
+      likes: 289,
+      comments: 35,
+      caption: "🧸 Desenvolvimento e Diversão com o Girababy Didático! 🧸",
     },
     {
       id: 3,
-      image: "https://via.placeholder.com/300x300/4CAF50/FFFFFF?text=Post+3",
+      image: "./src/assets/instagramDinoPintura.jpg",
       likes: 156,
       comments: 12,
-      caption: "Jogos educativos para todas as idades 📚",
+      caption:
+        "🦖🎨 Prepare-se para muita diversão e criatividade com o Super Kit Pintura Dinossauro! 🎨🦕",
     },
     {
       id: 4,
-      image: "https://via.placeholder.com/300x300/2196F3/FFFFFF?text=Post+4",
+      image: "./src/assets/instagramJogosPedagoga.jpg",
       likes: 203,
       comments: 15,
-      caption: "Pelúcias fofas para presentear! 🧸",
+      caption:
+        "📚✨ O pedagogo é aquele que ensina com amor, escuta com o coração e guia com propósito.",
     },
     {
       id: 5,
-      image: "https://via.placeholder.com/300x300/9C27B0/FFFFFF?text=Post+5",
+      image: "./src/assets/instagramDiaMaes.webp",
       likes: 167,
       comments: 9,
-      caption: "Robôs inteligentes para crianças tech! 🤖",
+      caption:
+        " Existem muitos jeitos de ser mãe... E todas têm algo em comum: Um amor que transforma 💖",
     },
     {
       id: 6,
-      image: "https://via.placeholder.com/300x300/009688/FFFFFF?text=Post+6",
+      image: "./src/assets/instagramDiaLivro.jpg",
       likes: 98,
       comments: 6,
-      caption: "Kits de criatividade para artistas mirins! 🎨",
+      caption: "📚✨ Ler é brincar com a imaginação!",
     },
   ];
 
@@ -110,54 +114,101 @@ const InstagramFeed = () => {
           </Box>
         </motion.div>
 
-        <Grid container spacing={2}>
+        <Grid
+          container
+          spacing={{ xs: 2, sm: 3, md: 3 }}
+          justifyContent="center"
+          alignItems="stretch"
+        >
           {instagramPosts.map((post, index) => (
-            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={post.id}>
+            <Grid
+              size={{ xs: 12, sm: 6, md: 4, lg: 4 }}
+              key={post.id}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                style={{ width: "100%", maxWidth: "400px" }}
               >
                 <Card
                   sx={{
-                    borderRadius: 2,
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    borderRadius: 3,
                     overflow: "hidden",
                     boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
                     transition: "all 0.3s ease",
                     cursor: "pointer",
+                    width: "100%",
+                    maxWidth: { xs: "350px", sm: "400px" },
+                    minHeight: { xs: "400px", sm: "420px", md: "450px" },
+                    mx: "auto",
                     "&:hover": {
-                      transform: "scale(1.05)",
+                      transform: "scale(1.02)",
                       boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
                     },
                   }}
                 >
                   <CardMedia
                     component="img"
-                    height="250"
                     image={post.image}
                     alt={`Post ${post.id}`}
-                    sx={{ objectFit: "cover" }}
+                    sx={{
+                      height: { xs: "280px", sm: "300px", md: "320px" },
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      width: "100%",
+                      flex: "0 0 auto",
+                    }}
                   />
-                  <CardContent sx={{ p: 2 }}>
+                  <CardContent
+                    sx={{
+                      p: { xs: 2, sm: 2.5 },
+                      flexGrow: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      minHeight: { xs: "100px", sm: "110px" },
+                    }}
+                  >
                     <Typography
                       variant="body2"
                       sx={{
                         color: "text.secondary",
-                        mb: 1,
-                        fontSize: "0.9rem",
+                        mb: 2,
+                        fontSize: { xs: "0.85rem", sm: "0.9rem" },
+                        lineHeight: 1.4,
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
                       }}
                     >
                       {post.caption}
                     </Typography>
-                    <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 2,
+                        mt: "auto",
+                      }}
+                    >
                       <Box
                         sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
                       >
                         <FavoriteIcon sx={{ fontSize: 16, color: "#E4405F" }} />
                         <Typography
                           variant="caption"
-                          sx={{ color: "text.secondary" }}
+                          sx={{ color: "text.secondary", fontWeight: 500 }}
                         >
                           {post.likes}
                         </Typography>
@@ -170,7 +221,7 @@ const InstagramFeed = () => {
                         />
                         <Typography
                           variant="caption"
-                          sx={{ color: "text.secondary" }}
+                          sx={{ color: "text.secondary", fontWeight: 500 }}
                         >
                           {post.comments}
                         </Typography>
