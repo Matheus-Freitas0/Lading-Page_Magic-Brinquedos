@@ -289,8 +289,11 @@ const HeroSection = () => {
                   sx={{
                     display: "flex",
                     gap: 2,
+                    flexDirection: { xs: "column", sm: "row" },
                     flexWrap: "wrap",
                     mb: 4,
+                    width: "100%",
+                    maxWidth: "100%",
                   }}
                 >
                   <motion.div
@@ -306,11 +309,13 @@ const HeroSection = () => {
                         background:
                           "linear-gradient(45deg, #25D366 30%, #128C7E 90%)", // theme.palette.magic.whatsapp
                         color: "white",
-                        fontSize: "1.1rem",
-                        padding: "16px 40px",
+                        fontSize: { xs: "0.9rem", md: "1.1rem" },
+                        padding: { xs: "12px 24px", md: "16px 40px" },
                         borderRadius: "50px",
                         boxShadow: "0 8px 24px rgba(37, 211, 102, 0.4)",
                         fontWeight: 600,
+                        minWidth: { xs: "auto", md: "auto" },
+                        width: { xs: "100%", sm: "auto" },
                         "&:hover": {
                           background:
                             "linear-gradient(45deg, #128C7E 30%, #25D366 90%)", // theme.palette.magic.whatsappDark
@@ -336,11 +341,12 @@ const HeroSection = () => {
                       sx={{
                         borderColor: "white",
                         color: "white",
-                        fontSize: "1.1rem",
-                        padding: "16px 40px",
+                        fontSize: { xs: "0.9rem", md: "1.1rem" },
+                        padding: { xs: "12px 24px", md: "16px 40px" },
                         borderRadius: "50px",
                         fontWeight: 600,
                         borderWidth: "2px",
+                        width: { xs: "100%", sm: "auto" },
                         "&:hover": {
                           backgroundColor: "rgba(255,255,255,0.1)",
                           borderColor: "white",

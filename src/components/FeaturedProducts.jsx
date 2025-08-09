@@ -24,83 +24,90 @@ const FeaturedProducts = () => {
       category: "Carrinhos",
       price: "R$ 19,99",
       rating: 5,
+      avaliations: 243,
       isNew: false,
       isPopular: true,
     },
     {
       id: 2,
-      name: "Carrinho Turbo Racing",
-      image:
-        "https://via.placeholder.com/300x300/FFA726/FFFFFF?text=Carrinho+Turbo",
-      category: "Carrinhos",
-      price: "R$ 129,90",
-      rating: 4,
-      isNew: false,
-      isPopular: true,
+      name: "Nerf - Lançador Alpha Strike",
+      image: "./src/assets/nerfAlpha.webp",
+      category: "Nerf",
+      price: "R$ 109,90",
+      rating: 5,
+      avaliations: 67,
+      isNew: true,
+      isPopular: false,
     },
     {
       id: 3,
-      name: "Jogo Educativo ABC",
-      image: "https://via.placeholder.com/300x300/4CAF50/FFFFFF?text=Jogo+ABC",
-      category: "Educativos",
-      price: "R$ 69,90",
+      name: "Boneco Minecraft - Cadres 35cm ",
+      image: "./src/assets/cadresMinecraft.webp",
+      category: "Bonecos",
+      price: "R$ 89,90",
       rating: 5,
+      avaliations: 126,
       isNew: true,
       isPopular: false,
     },
     {
       id: 4,
-      name: "Pelúcia Estrela Brilhante",
+      name: "Card para Colorir Cozy e Comfy",
       image:
-        "https://via.placeholder.com/300x300/2196F3/FFFFFF?text=Pelúcia+Estrela",
-      category: "Pelúcias",
-      price: "R$ 79,90",
-      rating: 4,
+        "./src/assets/cozyComfy.webp",
+      category: "Criatividade",
+      price: "R$ 4,99",
+      rating: 5,
+      avaliations: 314,
       isNew: false,
       isPopular: true,
     },
     {
       id: 5,
-      name: "Robô Inteligente Max",
-      image: "https://via.placeholder.com/300x300/9C27B0/FFFFFF?text=Robô+Max",
-      category: "Eletrônicos",
-      price: "R$ 199,90",
+      name: "Boneco Youtuber Enaldinho Com Pulseira Do Poder",
+      image: "./src/assets/bonecoEnaldinho.webp",
+      category: "Bonecos",
+      price: "R$ 179,90",
       rating: 5,
-      isNew: true,
+      avaliations: 92,
+      isNew: false,
       isPopular: true,
     },
     {
       id: 6,
-      name: "Kit Criatividade Mágica",
+      name: "Conjunto De Acessórios De Beleza - Hello Kitty",
       image:
-        "https://via.placeholder.com/300x300/009688/FFFFFF?text=Kit+Criatividade",
-      category: "Criatividade",
-      price: "R$ 149,90",
-      rating: 4,
+        "./src/assets/acessoriosHelloKitty.webp",
+      category: "Acessórios",
+      price: "R$ 129,90",
+      rating: 5,
+      avaliations: 38,
       isNew: false,
       isPopular: false,
     },
     {
       id: 7,
-      name: "Quebra-Cabeça 3D Castelo",
+      name: "Boneco Disney Stitch - Minimals",
       image:
-        "https://via.placeholder.com/300x300/E91E63/FFFFFF?text=Quebra+Cabeça",
-      category: "Jogos",
-      price: "R$ 119,90",
+        "./src/assets/stitchMinimals.webp",
+      category: "Bonecos",
+      price: "R$ 79,90",
       rating: 5,
+      avaliations: 172,
       isNew: true,
       isPopular: false,
     },
     {
       id: 8,
-      name: "Dinossauro Gigante Rex",
+      name: "Bicicleta Equilíbrio Totoka Infantil Totocross",
       image:
-        "https://via.placeholder.com/300x300/795548/FFFFFF?text=Dinossauro+Rex",
-      category: "Figuras de Ação",
-      price: "R$ 159,90",
-      rating: 4,
+        "./src/assets/totocross.webp",
+      category: "Bicicletas",
+      price: "R$ 139,90",
+      rating: 5,
+      avaliations: 21,
       isNew: false,
-      isPopular: true,
+      isPopular: false,
     },
   ];
 
@@ -149,13 +156,16 @@ const FeaturedProducts = () => {
 
         <Grid
           container
-          spacing={4}
+          spacing={{ xs: 3, sm: 3, md: 4 }}
           justifyContent="center"
           alignItems="stretch"
+          sx={{
+            px: { xs: 1, sm: 2, md: 0 },
+          }}
         >
           {products.map((product, index) => (
             <Grid
-              size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3 }}
+              size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }}
               key={product.id}
               sx={{
                 display: "flex",
@@ -180,9 +190,10 @@ const FeaturedProducts = () => {
                     boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
                     transition: "all 0.3s ease",
                     position: "relative",
-                    maxWidth: { xs: "350px", sm: "none" },
+                    maxWidth: { xs: "400px", sm: "none" },
+                    minWidth: { xs: "280px", sm: "240px", md: "220px" },
                     mx: { xs: "auto", sm: 0 },
-                    minHeight: "500px",
+                    minHeight: { xs: "450px", sm: "480px", md: "500px" },
                     "&:hover": {
                       transform: "translateY(-12px) scale(1.02)",
                       boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
@@ -242,18 +253,30 @@ const FeaturedProducts = () => {
 
                   <CardMedia
                     component="img"
-                    height="200"
                     image={product.image}
                     alt={product.name}
-                    sx={{ objectFit: "cover" }}
+                    sx={{
+                      height: {
+                        xs: "300px",
+                        lg: "280px",
+                      },
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      width: "100%",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        transform: "scale(1.05)",
+                      },
+                    }}
                   />
                   <CardContent
                     sx={{
                       flexGrow: 1,
-                      p: 3,
+                      p: { xs: 2, sm: 2.5, md: 3 },
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "space-between",
+                      minHeight: { xs: "180px", sm: "200px", md: "220px" },
                     }}
                   >
                     <Box>
@@ -271,6 +294,12 @@ const FeaturedProducts = () => {
                             fontWeight: 600,
                             color: "text.primary",
                             flex: 1,
+                            fontSize: {
+                              xs: "1rem",
+                              sm: "1.1rem",
+                              md: "1.25rem",
+                            },
+                            lineHeight: 1.3,
                           }}
                         >
                           {product.name}
@@ -301,7 +330,7 @@ const FeaturedProducts = () => {
                           variant="body2"
                           sx={{ color: "text.secondary" }}
                         >
-                          ({product.rating})
+                          ({product.avaliations})
                         </Typography>
                       </Box>
 
@@ -311,6 +340,11 @@ const FeaturedProducts = () => {
                           fontWeight: 700,
                           color: "primary.main",
                           mb: 2,
+                          fontSize: {
+                            xs: "1.3rem",
+                            sm: "1.4rem",
+                            md: "1.5rem",
+                          },
                         }}
                       >
                         {product.price}
@@ -331,7 +365,8 @@ const FeaturedProducts = () => {
                           color: "white",
                           fontWeight: 600,
                           borderRadius: 2,
-                          py: 1.5,
+                          py: { xs: 1.2, sm: 1.5 },
+                          fontSize: { xs: "0.85rem", sm: "0.9rem", md: "1rem" },
                           "&:hover": {
                             backgroundColor: "#128C7E",
                             transform: "translateY(-2px)",

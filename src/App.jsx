@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, Box } from "@mui/material";
 import theme from "./theme";
 import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
@@ -17,38 +17,46 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Navigation />
+      <Box
+        sx={{
+          width: "100%",
+          maxWidth: "100vw",
+          overflow: "hidden",
+        }}
+      >
+        <Navigation />
 
-      <div id="home">
-        <HeroSection />
-      </div>
+        <div id="home">
+          <HeroSection />
+        </div>
 
-      <div id="stats">
-        <Stats />
-      </div>
+        <div id="stats">
+          <Stats />
+        </div>
 
-      <div id="produtos">
-        <FeaturedProducts />
-      </div>
+        <div id="produtos">
+          <FeaturedProducts />
+        </div>
 
-      <div id="categorias">
-        <Categories />
-      </div>
+        <div id="categorias">
+          <Categories />
+        </div>
 
-      <div id="depoimentos">
-        <Testimonials />
-      </div>
+        <div id="depoimentos">
+          <Testimonials />
+        </div>
 
-      <div id="instagram">
-        <InstagramFeed />
-      </div>
+        <div id="instagram">
+          <InstagramFeed />
+        </div>
 
-      <div id="localizacao">
-        <Location />
-      </div>
+        <div id="localizacao">
+          <Location />
+        </div>
 
-      <Footer />
-      <FloatingWhatsApp />
+        <Footer />
+        <FloatingWhatsApp />
+      </Box>
     </ThemeProvider>
   );
 }

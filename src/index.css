@@ -8,12 +8,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Lexend Deca", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Scrollbar personalizada */

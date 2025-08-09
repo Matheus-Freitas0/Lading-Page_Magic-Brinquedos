@@ -181,7 +181,6 @@ const Navigation = () => {
               alt="Magic Brinquedos"
               sx={{
                 height: 40,
-                filter: "brightness(0) invert(1)",
               }}
             />
             <IconButton
@@ -201,11 +200,16 @@ const Navigation = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <ListItem
-                  button
+                  component="button"
                   onClick={() => scrollToSection(item.href)}
                   sx={{
                     borderRadius: 2,
                     mb: 1,
+                    cursor: "pointer",
+                    border: "none",
+                    backgroundColor: "transparent",
+                    width: "100%",
+                    textAlign: "left",
                     "&:hover": {
                       backgroundColor: "rgba(255,255,255,0.1)",
                     },

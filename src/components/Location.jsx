@@ -220,10 +220,15 @@ const Location = () => {
                 >
                   <iframe
                     src="https://www.google.com/maps?q=Magic+Brinquedos,+R.+Abílio+Pedro+Ramos+672,+Vila+Nilo,+São+Paulo,+SP,+02279-000&output=embed&z=16"
-                    width="600"
+                    width="100%"
                     height="450"
                     loading="lazy"
                     title="Localização Magic Brinquedos"
+                    style={{
+                      border: 0,
+                      borderRadius: "12px",
+                      maxWidth: "100%",
+                    }}
                   ></iframe>
                 </Box>
               </Card>
