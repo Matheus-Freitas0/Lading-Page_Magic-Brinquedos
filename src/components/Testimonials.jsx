@@ -16,30 +16,30 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Maria Silva",
-      role: "Mãe da Ana, 6 anos",
+      name: "Renato Topgian",
+      role: "Cliente há 9 meses",
       content:
-        "A Magic Brinquedos é incrível! Minha filha adora os brinquedos educativos. A qualidade é excelente e o atendimento é muito atencioso. Recomendo para todas as famílias!",
+        "A loja é fantástica! Uma variedade incrível de brinquedos para todas as idades, desde os educativos até os mais modernos. A equipe é super atenciosa e sempre pronta para ajudar, o que facilita muito a escolha do brinquedo ideal para cada criança",
       rating: 5,
-      avatar: "https://via.placeholder.com/80x80/FF6B9D/FFFFFF?text=MS",
+      avatar: "https://via.placeholder.com/80x80/FF6B9D/FFFFFF?text=RT",
     },
     {
       id: 2,
-      name: "João Santos",
-      role: "Pai do Pedro, 8 anos",
+      name: "Diego Fernando Pereira",
+      role: "Cliente há 1 ano e 8 meses",
       content:
-        "Comprei um carrinho para meu filho e ele ficou encantado! Os brinquedos são resistentes e duram muito. A loja tem uma variedade incrível de opções.",
+        "Ambiente top, atendimento top, preço top! Nada de exploração preço justo brinquedos de vários preços e qualidade com preço justo dentro do possível.",
       rating: 5,
-      avatar: "https://via.placeholder.com/80x80/FFA726/FFFFFF?text=JS",
+      avatar: "https://via.placeholder.com/80x80/FFA726/FFFFFF?text=DF",
     },
     {
       id: 3,
-      name: "Carla Oliveira",
-      role: "Mãe da Sofia, 4 anos",
+      name: "Lidiane Melo",
+      role: "Cliente há mais de 2 anos",
       content:
-        "A Magic Brinquedos sempre tem os melhores preços e produtos de qualidade. Minha filha adora as bonecas e pelúcias. É nossa loja preferida!",
+        "Simplesmente adorei esta loja! Tudo muito organizado, fácil de encontrar tudo que precisamos; muita variedade pra todas as faixas etárias, gostos e bolsos também; também achei bem significativo o atendimento da moça que ali estava, muito prestativa e atenciosa",
       rating: 5,
-      avatar: "https://via.placeholder.com/80x80/4CAF50/FFFFFF?text=CO",
+      avatar: "https://via.placeholder.com/80x80/4CAF50/FFFFFF?text=LM",
     },
   ];
 
@@ -117,7 +117,11 @@ const Testimonials = () => {
                         mb: 3,
                         fontStyle: "italic",
                         color: "text.secondary",
-                        lineHeight: 1.6,
+                        lineHeight: 1.4,
+                        fontSize: { xs: "0.9rem", md: "1.1rem" },
+                        Height: "250px",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
                       }}
                     >
                       "{testimonial.content}"

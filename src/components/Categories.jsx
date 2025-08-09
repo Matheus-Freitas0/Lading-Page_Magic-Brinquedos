@@ -10,14 +10,12 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import SchoolIcon from "@mui/icons-material/School";
-import ToysIcon from "@mui/icons-material/Toys";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import BrushIcon from "@mui/icons-material/Brush";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
-import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
-
+import ExtensionIcon from "@mui/icons-material/Extension";
 const Categories = () => {
   const theme = useTheme();
 
@@ -26,57 +24,57 @@ const Categories = () => {
       id: 1,
       name: "Educativos",
       icon: SchoolIcon,
-      color: theme.palette.success.main, // Verde
+      color: theme.palette.success.main,
       description: "Aprenda brincando!",
     },
     {
       id: 2,
       name: "Eletrônicos",
       icon: SmartToyIcon,
-      color: theme.palette.magic.purple, // Roxo
+      color: theme.palette.magic.purple,
       description: "Tecnologia divertida",
     },
     {
       id: 3,
       name: "Bonecas",
       icon: FavoriteIcon,
-      color: theme.palette.primary.main, // Rosa
+      color: theme.palette.primary.main,
       description: "Sonhos e fantasias",
     },
     {
       id: 4,
       name: "Carrinhos",
       icon: DirectionsCarIcon,
-      color: theme.palette.secondary.main, // Laranja
+      color: theme.palette.secondary.main,
       description: "Velocidade e aventura",
     },
     {
       id: 5,
       name: "Jogos",
       icon: SportsEsportsIcon,
-      color: theme.palette.info.main, // Azul
+      color: theme.palette.info.main,
       description: "Diversão em família",
     },
     {
       id: 6,
       name: "Pelúcias",
       icon: FavoriteIcon,
-      color: theme.palette.warning.main, // Amarelo
+      color: theme.palette.warning.main,
       description: "Fofura e carinho",
     },
     {
       id: 7,
       name: "Criatividade",
       icon: BrushIcon,
-      color: theme.palette.magic.teal, // Teal
+      color: theme.palette.magic.teal,
       description: "Arte e imaginação",
     },
     {
       id: 8,
-      name: "Figuras de Ação",
-      icon: DirectionsRunIcon,
-      color: theme.palette.magic.brown, // Marrom do tema
-      description: "Aventura e ação",
+      name: "Tabuleiro",
+      icon: ExtensionIcon,
+      color: theme.palette.magic.brown,
+      description: "Diversão estratégica",
     },
   ];
 

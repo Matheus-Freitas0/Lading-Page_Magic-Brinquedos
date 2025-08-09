@@ -13,21 +13,18 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import StarIcon from "@mui/icons-material/Star";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 
 const FeaturedProducts = () => {
   const products = [
     {
       id: 1,
-      name: "Boneca Mágica Aurora",
-      image:
-        "https://via.placeholder.com/300x300/FF6B9D/FFFFFF?text=Boneca+Mágica",
-      category: "Bonecas",
-      price: "R$ 89,90",
+      name: "Hot Wheels unidade",
+      image: "./src/assets/hotWheels.webp",
+      category: "Carrinhos",
+      price: "R$ 19,99",
       rating: 5,
-      isNew: true,
+      isNew: false,
       isPopular: true,
     },
     {
