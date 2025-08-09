@@ -118,6 +118,13 @@ const FeaturedProducts = () => {
     window.open(`https://wa.me/5511915962801?text=${message}`, "_blank");
   };
 
+  const handleWhatsAppAllProducts = () => {
+    const message = encodeURIComponent(
+      `Olá! Gostaria de saber mais sobre todos os produtos que vocês tem disponíveis.`
+    );
+    window.open(`https://wa.me/5511915962801?text=${message}`, "_blank");
+  };
+
   return (
     <Box sx={{ py: 8, backgroundColor: "background.paper" }}>
       <Container maxWidth="lg">
@@ -404,7 +411,7 @@ const FeaturedProducts = () => {
               <Button
                 variant="outlined"
                 startIcon={<WhatsAppIcon />}
-                onClick={() => handleWhatsApp("produtos")}
+                onClick={() => handleWhatsAppAllProducts()}
                 sx={{
                   borderColor: "primary.main",
                   color: "primary.main",
