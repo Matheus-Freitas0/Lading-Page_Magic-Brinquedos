@@ -88,6 +88,13 @@ const Navigation = () => {
                     cursor: "pointer",
                     filter: isScrolled ? "brightness(1.1)" : "brightness(1)",
                     transition: "all 0.3s ease",
+                    outline: "none",
+                    "&:focus": {
+                      outline: "none",
+                    },
+                    "&:active": {
+                      outline: "none",
+                    },
                   }}
                 />
               </motion.div>
@@ -179,8 +186,17 @@ const Navigation = () => {
               component="img"
               src={logo}
               alt="Magic Brinquedos"
+              onClick={() => scrollToSection("#home")}
               sx={{
                 height: 40,
+                cursor: "pointer",
+                outline: "none",
+                "&:focus": {
+                  outline: "none",
+                },
+                "&:active": {
+                  outline: "none",
+                },
               }}
             />
             <IconButton
