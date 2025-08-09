@@ -136,6 +136,45 @@ body {
   outline-offset: 2px;
 }
 
+/* Remove outline de elementos clicáveis específicos */
+img:focus,
+img:active,
+.no-outline:focus,
+.no-outline:active,
+[role="button"]:focus,
+[role="button"]:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove tap highlight no mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Permite seleção de texto apenas onde necessário */
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 /* Melhorias para animações suaves */
 .motion-safe {
   will-change: transform;

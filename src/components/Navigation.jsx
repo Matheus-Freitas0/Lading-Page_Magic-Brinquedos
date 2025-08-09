@@ -77,25 +77,33 @@ const Navigation = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToSection("#home")}
+                className="no-outline"
+                style={{
+                  cursor: "pointer",
+                  outline: "none",
+                  border: "none",
+                  background: "none",
+                  padding: 0,
+                  display: "inline-block",
+                }}
+                onFocus={(e) => e.target.blur()}
+                onMouseDown={(e) => e.preventDefault()}
               >
-                <Box
-                  component="img"
+                <img
                   src={logo}
                   alt="Magic Brinquedos"
-                  onClick={() => scrollToSection("#home")}
-                  sx={{
-                    height: { xs: 40, md: 50 },
-                    cursor: "pointer",
+                  className="no-outline"
+                  style={{
+                    height: "50px",
                     filter: isScrolled ? "brightness(1.1)" : "brightness(1)",
                     transition: "all 0.3s ease",
                     outline: "none",
-                    "&:focus": {
-                      outline: "none",
-                    },
-                    "&:active": {
-                      outline: "none",
-                    },
+                    border: "none",
+                    display: "block",
                   }}
+                  onFocus={(e) => e.target.blur()}
+                  onMouseDown={(e) => e.preventDefault()}
                 />
               </motion.div>
 
@@ -182,23 +190,34 @@ const Navigation = () => {
               mb: 3,
             }}
           >
-            <Box
-              component="img"
-              src={logo}
-              alt="Magic Brinquedos"
+            <div
               onClick={() => scrollToSection("#home")}
-              sx={{
-                height: 40,
+              className="no-outline"
+              style={{
                 cursor: "pointer",
                 outline: "none",
-                "&:focus": {
-                  outline: "none",
-                },
-                "&:active": {
-                  outline: "none",
-                },
+                border: "none",
+                background: "none",
+                padding: 0,
+                display: "inline-block",
               }}
-            />
+              onFocus={(e) => e.target.blur()}
+              onMouseDown={(e) => e.preventDefault()}
+            >
+              <img
+                src={logo}
+                alt="Magic Brinquedos"
+                className="no-outline"
+                style={{
+                  height: "40px",
+                  outline: "none",
+                  border: "none",
+                  display: "block",
+                }}
+                onFocus={(e) => e.target.blur()}
+                onMouseDown={(e) => e.preventDefault()}
+              />
+            </div>
             <IconButton
               onClick={() => setMobileOpen(false)}
               sx={{ color: "white" }}
